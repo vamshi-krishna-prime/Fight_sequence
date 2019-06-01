@@ -55,9 +55,7 @@ enemy_defense= 20
 player_defense= 20
 player_health = 100
 enemy_health = 100
-# damage= int((abs(damage)+damage)/2)
-# print(damage)
-# print("Net damage: " + damage)
+
 def fight():
     global enemy_defense
     global player_defense
@@ -95,6 +93,7 @@ def fight():
             print_pause("You have successfully slain the enemy")
             print_pause("You emerge victorious !!")
             return "player wins"
+          
         elif player_health <= 0 and enemy_health > 0:
             print_pause("Game Ends !!, Better luck next time...")
             return "enemy wins"
