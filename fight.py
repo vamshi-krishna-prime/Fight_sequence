@@ -35,16 +35,7 @@ enemy_defense_moves= ["Enemy has a strong defense",
                         "Enemy is determined to take you head on",
                         "Your enemy is a formidable opponent"]
 
-def health_decrease(health, num):
-    if health > 0:
-        health += num
-        if health < 0:
-            health = 0
-        return health
-    else:
-        health = 0
-        return health
-      
+
 def print_pause(message):
     print(message)
     time.sleep(1)
@@ -64,15 +55,24 @@ enemy_defense= 20
 player_defense= 20
 player_health = 100
 enemy_health = 100
-
+# damage= int((abs(damage)+damage)/2)
+# print(damage)
+# print("Net damage: " + damage)
 def fight():
     global enemy_defense
     global player_defense
     global player_health
     global enemy_health
+    global player_offense_moves
+    global player_defense_moves
+    global enemy_offense_moves
+    global enemy_defense_moves
+
     for turn in range(20):
         if turn % 2 == 0 and player_health > 0:
             print_pause("Player Attacks")
+            print_pause(random.choice(player_offense_moves))
+            print_pause(random.choice(enemy_defense_moves))
             player_offense= random.randint(20,50)
             enemy_damage= enemy_defense - player_offense
             print_pause("Enemy damage: "+ str(enemy_damage))
@@ -82,6 +82,8 @@ def fight():
 
         elif turn % 2 == 1 and enemy_health > 0:
             print_pause("Enemy Attacks")
+            print_pause(random.choice(enemy_offense_moves))
+            print_pause(random.choice(player_defense_moves))
             enemy_offense= random.randint(20,50)
             player_damage= player_defense - enemy_offense
             print_pause("Player damage: "+ str(player_damage))
@@ -93,7 +95,6 @@ def fight():
             print_pause("You have successfully slain the enemy")
             print_pause("You emerge victorious !!")
             return "player wins"
-        
         elif player_health <= 0 and enemy_health > 0:
             print_pause("Game Ends !!, Better luck next time...")
             return "enemy wins"
