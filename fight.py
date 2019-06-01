@@ -55,7 +55,9 @@ enemy_defense= 20
 player_defense= 20
 player_health = 100
 enemy_health = 100
-
+# damage= int((abs(damage)+damage)/2)
+# print(damage)
+# print("Net damage: " + damage)
 def fight():
     global enemy_defense
     global player_defense
