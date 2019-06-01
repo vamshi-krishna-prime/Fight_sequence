@@ -38,4 +38,13 @@ def fight():
             print_pause("Player_health: "+ str(player_health))
             print_pause("Enemy_health: "+ str(enemy_health) + "\n")
             
+        if player_health > 0 and enemy_health <= 0:
+            print_pause("You have successfully slain the enemy")
+            print_pause("You emerge victorious !!")
+            return "player wins"
+        
+        elif player_health <= 0 and enemy_health > 0:
+            print_pause("Game Ends !!, Better luck next time...")
+            return "enemy wins"
+            
 fight()
