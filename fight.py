@@ -1,5 +1,10 @@
 import random
+import time
 
+def print_pause(message):
+    print(message)
+    time.sleep(1)
+    
 enemy_defense= 20
 player_defense= 20
 player_health = 100
