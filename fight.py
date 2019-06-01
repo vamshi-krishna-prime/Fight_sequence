@@ -28,3 +28,7 @@ def fight():
             enemy_health += enemy_damage
             print_pause("Player_health: "+ str(player_health))
             print_pause("Enemy_health: "+ str(enemy_health) + "\n")
+
+# damage= int((abs(damage)+damage)/2)
+# print(damage)
+# print("Net damage: " + damage)
