@@ -28,6 +28,13 @@ enemy_offense_moves= ["The enemy charges at you like a mad bull",
                       "The enemy jumps on you",
                       "The enemy fights you head on"]
 
+enemy_defense_moves= ["Enemy has a strong defense",
+                        "Your enemy has brains to dodge your attacks",
+                        "Your enemy has speed advantage to evade your attacks",
+                        "Your enemy has a strength to with stand your attack",
+                        "Enemy is determined to take you head on",
+                        "Your enemy is a formidable opponent"]
+
 def print_pause(message):
     print(message)
     time.sleep(1)
