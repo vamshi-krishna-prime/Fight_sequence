@@ -4,17 +4,25 @@ import time
 def print_pause(message):
     print(message)
     time.sleep(1)
-    
+
+def health_decrease(health, num):
+    if health > 0:
+        health += num
+        if health < 0:
+            health = 0
+        return health
+    else:
+        health = 0
+        return health
+
+
 enemy_defense= 20
 player_defense= 20
 player_health = 100
 enemy_health = 100
-
 # damage= int((abs(damage)+damage)/2)
 # print(damage)
 # print("Net damage: " + damage)
-
-
 def fight():
     global enemy_defense
     global player_defense
@@ -26,7 +34,7 @@ def fight():
             player_offense= random.randint(20,50)
             enemy_damage= enemy_defense - player_offense
             print_pause("Enemy damage: "+ str(enemy_damage))
-            enemy_health += enemy_damage
+            enemy_health = health_decrease(enemy_health, enemy_damage)
             print_pause("Player_health: "+ str(player_health))
             print_pause("Enemy_health: "+ str(enemy_health) + "\n")
 
@@ -35,17 +43,17 @@ def fight():
             enemy_offense= random.randint(20,50)
             player_damage= player_defense - enemy_offense
             print_pause("Player damage: "+ str(player_damage))
-            player_health += player_damage
+            player_health = health_decrease(player_health, player_damage)
             print_pause("Player_health: "+ str(player_health))
             print_pause("Enemy_health: "+ str(enemy_health) + "\n")
-            
+
         if player_health > 0 and enemy_health <= 0:
             print_pause("You have successfully slain the enemy")
             print_pause("You emerge victorious !!")
             return "player wins"
-        
         elif player_health <= 0 and enemy_health > 0:
             print_pause("Game Ends !!, Better luck next time...")
             return "enemy wins"
-            
-fight()
+
+fight_result= fight()
+print_pause(fight_result)
