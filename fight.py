@@ -29,6 +29,13 @@ def fight():
             print_pause("Player_health: "+ str(player_health))
             print_pause("Enemy_health: "+ str(enemy_health) + "\n")
 
-# damage= int((abs(damage)+damage)/2)
-# print(damage)
-# print("Net damage: " + damage)
+        elif turn % 2 == 1 and enemy_health > 0:
+            print_pause("Enemy Attacks")
+            enemy_offense= random.randint(20,50)
+            player_damage= player_defense - enemy_offense
+            print_pause("Player damage: "+ str(player_damage))
+            player_health += player_damage
+            print_pause("Player_health: "+ str(player_health))
+            print_pause("Enemy_health: "+ str(enemy_health) + "\n")
+            
+fight()
