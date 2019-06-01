@@ -13,6 +13,13 @@ player_offense_moves= ["You step forward to slash the enemy",
                        "You stand tall and attck the enemy from the front",
                        "You run around and penetrate the back of the enemy"]
 
+player_defense_moves= ["You hold the sword to counter the enemy attck",
+                        "The enemy attacks are repelled by you",
+                        "The enemy jumps on you and you roll to the side",
+                        "You swing your sword in rythm to the enemy attacks",
+                        "You step back away from the enemy",
+                        "You dodge the enemy sword and ready to make an attack"]
+
 def print_pause(message):
     print(message)
     time.sleep(1)
