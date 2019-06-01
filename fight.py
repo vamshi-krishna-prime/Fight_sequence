@@ -1,6 +1,18 @@
 import random
 import time
 
+player_offense_moves= ["You step forward to slash the enemy",
+                       "You rise high to deliver a mighty blow",
+                       "You make a lunge and slash attack",
+                       "You deliver an counter attack",
+                       "A power blow was directed towads the enemy",
+                       "You rain down a series of short swings",
+                       "A sharp delivery to penetrate the defense of enemy",
+                       "You run towards the enemy at great speed",
+                       "You duck down and deliver a low swing",
+                       "You stand tall and attck the enemy from the front",
+                       "You run around and penetrate the back of the enemy"]
+
 def print_pause(message):
     print(message)
     time.sleep(1)
