@@ -20,6 +20,14 @@ player_defense_moves= ["You hold the sword to counter the enemy attck",
                         "You step back away from the enemy",
                         "You dodge the enemy sword and ready to make an attack"]
 
+enemy_offense_moves= ["The enemy charges at you like a mad bull",
+                      "The enemy has a arm streangth of a boulder",
+                      "Enemy has wits and great strategy to corner you",
+                      "The enemy attacks from behind",
+                      "The enemy rolls around and attacks from the side",
+                      "The enemy jumps on you",
+                      "The enemy fights you head on"]
+
 def print_pause(message):
     print(message)
     time.sleep(1)
