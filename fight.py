@@ -35,6 +35,16 @@ enemy_defense_moves= ["Enemy has a strong defense",
                         "Enemy is determined to take you head on",
                         "Your enemy is a formidable opponent"]
 
+def health_decrease(health, num):
+    if health > 0:
+        health += num
+        if health < 0:
+            health = 0
+        return health
+    else:
+        health = 0
+        return health
+      
 def print_pause(message):
     print(message)
     time.sleep(1)
